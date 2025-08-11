@@ -1,0 +1,25 @@
+meta {
+  name: OCR ID Card
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{localhost8000_api-v1}}/ocr/id-card
+  body: multipartForm
+  auth: apikey
+}
+
+auth:apikey {
+  key: X-API-KEY
+  value: 52d19d3dbf98d6b5a838399560ddeec669f3acd4a52217271a0f1039ee8c35cc
+  placement: header
+}
+
+body:multipart-form {
+  file: @file(C:\Users\mahme\Documents\zorenscan\test_data\card-1-converted.jpg)
+}
+
+settings {
+  encodeUrl: true
+}

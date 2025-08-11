@@ -1,0 +1,21 @@
+meta {
+  name: Home
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{localhost8000}}/
+  body: none
+  auth: apikey
+}
+
+auth:apikey {
+  key: X-API-KEY
+  value: 52d19d3dbf98d6b5a838399560ddeec669f3acd4a52217271a0f1039ee8c35cc
+  placement: header
+}
+
+settings {
+  encodeUrl: true
+}
